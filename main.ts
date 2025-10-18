@@ -1,12 +1,11 @@
 let 速さ = 0
 let 回 = 0
-let Group = 0
 if (input.buttonIsPressed(Button.A)) {
-    Group = 3
+    radio.setGroup(3)
 } else if (input.buttonIsPressed(Button.B)) {
-    Group = 4
+    radio.setGroup(4)
 } else {
-    Group = 4
+    radio.setGroup(5)
 }
 radio.sendNumber(0)
 basic.forever(function () {
@@ -15,17 +14,14 @@ basic.forever(function () {
     } else {
         回 = 回 * 0.99
     }
-    速さ = 回 / 35
-    if (速さ > 1) {
-        速さ = 100
-    } else {
-        速さ = 回 * 100
+    if (回 > 36) {
+        回 = 36
     }
+    速さ = Math.trunc(回 / 36 * 100)
     radio.sendNumber(速さ)
-    if (回 > 15) {
+    if (回 > 18) {
         basic.showArrow(ArrowNames.North)
     } else {
-        basic.clearScreen()
+        basic.showIcon(IconNames.Chessboard)
     }
-    basic.pause(50)
 })

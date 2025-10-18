@@ -12,7 +12,7 @@ basic.forever(function () {
     if (input.acceleration(Dimension.Y) > 2000) {
         回 = 回 + 1
     } else {
-        回 = 回 * 0.9
+        回 = 回 * 0.97
     }
     if (回 > 10) {
         回 = 10
@@ -23,9 +23,4 @@ basic.forever(function () {
     }
     速さ = Math.trunc(回 / 10 * 100)
     radio.sendNumber(速さ)
-    if (回 >= 5) {
-        basic.showArrow(ArrowNames.North)
-    } else {
-        basic.clearScreen()
-    }
 })

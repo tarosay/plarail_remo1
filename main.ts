@@ -27,4 +27,5 @@ basic.forever(function () {
     } else {
         basic.clearScreen()
     }
+    basic.pause(50)
 })

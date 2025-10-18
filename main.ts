@@ -21,8 +21,8 @@ basic.forever(function () {
     } else {
         速さ = 回 * 100
     }
-    radio.sendNumber(0)
-    if (回 > 30) {
+    radio.sendNumber(速さ)
+    if (回 > 15) {
         basic.showArrow(ArrowNames.North)
     } else {
         basic.clearScreen()

@@ -12,7 +12,7 @@ basic.forever(function () {
     if (input.acceleration(Dimension.Y) > 2000) {
         回 = 回 + 1
     } else {
-        回 = 回 * 0.97
+        回 = 回 * 0.93
     }
     if (回 > 10) {
         回 = 10

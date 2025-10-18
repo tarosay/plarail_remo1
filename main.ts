@@ -8,7 +8,7 @@ if (input.buttonIsPressed(Button.A)) {
 } else {
     Group = 4
 }
-radio.sendValue("c", 0)
+radio.sendNumber(0)
 basic.forever(function () {
     if (input.acceleration(Dimension.Y) > 2000) {
         回 = 回 + 1
@@ -17,11 +17,11 @@ basic.forever(function () {
     }
     速さ = 回 / 35
     if (速さ > 1) {
-        速さ = 1023
+        速さ = 100
     } else {
-        速さ = 回 * 1023
-        radio.sendValue("c", 速さ)
+        速さ = 回 * 100
     }
+    radio.sendNumber(0)
     if (回 > 30) {
         basic.showArrow(ArrowNames.North)
     } else {

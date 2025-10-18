@@ -6,7 +6,7 @@ if (input.buttonIsPressed(Button.A)) {
 } else if (input.buttonIsPressed(Button.B)) {
     Group = 4
 } else {
-	
+    Group = 4
 }
 radio.sendValue("c", 0)
 basic.forever(function () {

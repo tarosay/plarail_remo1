@@ -1,10 +1,13 @@
 let 速さ = 0
 if (input.buttonIsPressed(Button.A)) {
     radio.setGroup(3)
+    basic.showNumber(3)
 } else if (input.buttonIsPressed(Button.B)) {
     radio.setGroup(4)
+    basic.showNumber(4)
 } else {
     radio.setGroup(4)
+    basic.showNumber(4)
 }
 radio.sendNumber(0)
 let 回 = 0

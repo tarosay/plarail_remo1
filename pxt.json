@@ -1,5 +1,5 @@
 {
-    "name": "プラレールコントロール1",
+    "name": "プラレールコントロール1 - コピー",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -15,7 +15,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.17",
+        "target": "8.0.18",
         "targetId": "microbit"
     },
     "supportedTargets": [
